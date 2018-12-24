@@ -12,34 +12,20 @@
 <ion-content>
   <ion-grid>
     <ion-row style="border-bottom: groove">
-        <ion-col>Status</ion-col>
-        <ion-col>User Id</ion-col>
-        <ion-col>Task</ion-col>
+      <ion-col>Status</ion-col>
+      <ion-col>User Id</ion-col>
+      <ion-col>Task</ion-col>
     </ion-row>
     <ion-row style="border-bottom: groove" *ngFor="let item of todoList">
-        <ion-col>
-            <ion-checkbox color="primary" [(ngModel)]="item.completed"></ion-checkbox>
-        </ion-col>
       <ion-col>
-          {{item.userId}}
+        <ion-checkbox color="primary" [(ngModel)]="item.completed"></ion-checkbox>
       </ion-col>
       <ion-col>
-          {{item.title}}
+        {{item.userId}}
+      </ion-col>
+      <ion-col>
+        {{item.title}}
       </ion-col>
     </ion-row>
   </ion-grid>
-  <!-- <ion-list>
-    <ion-item *ngFor="let item of todoList">
-      <ion-icon [name]="item.completed ? 'checkbox' : 'checkbox-outline'"></ion-icon>
-      {{item.userId}}
-      <div class="item-note" slot="end">
-        {{item.title}}
-      </div>
-    </ion-item>
-  </ion-list> -->
-  <!--
-    <div *ngIf="selectedItem" padding>
-      You navigated here from <b>{{selectedItem.title }}</b>
-    </div>
-  -->
 </ion-content>
